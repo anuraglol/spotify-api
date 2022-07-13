@@ -12,11 +12,11 @@ const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 
 const getAccessToken = async () => {
   const response = await axios.post(TOKEN_ENDPOINT, {
-    grant_type: "refresh_token",
-    refresh_token,
     headers: {
       Authorization: `Basic ${basic}`,
     },
+    grant_type: "refresh_token",
+    refresh_token,
   });
 
   return response.data;
