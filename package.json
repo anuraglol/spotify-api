@@ -6,8 +6,10 @@
   "author": "Anurag <kr.anurag24@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsup src/* --outDir dist --watch",
-    "dev": "nodemon dist/index.cjs"
+    "build:dev": "tsup src/* --outDir dist --watch",
+    "build": "tsup src/* --outDir dist",
+    "dev": "nodemon dist/index.cjs",
+    "start": "yarn build && node dist/index.cjs"
   },
   "type": "module",
   "devDependencies": {
